@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -144,7 +144,7 @@ function queue(hooks, data) {
   for (var i = 0; i < hooks.length; i++) {
     var hook = hooks[i];
     if (promise) {
-      promise = Promise.then(wrapperHook(hook));
+      promise = Promise.resolve(wrapperHook(hook));
     } else {
       var res = hook(data);
       if (isPromise(res)) {
@@ -346,9 +346,9 @@ function upx2px(number, newDeviceWidth) {
   result = Math.floor(result + EPS);
   if (result === 0) {
     if (deviceDPR === 1 || !isIOS) {
-      return 1;
+      result = 1;
     } else {
-      return 0.5;
+      result = 0.5;
     }
   }
   return number < 0 ? -result : result;
@@ -364,6 +364,38 @@ var baseApi = /*#__PURE__*/Object.freeze({
   addInterceptor: addInterceptor,
   removeInterceptor: removeInterceptor,
   interceptors: interceptors });
+
+
+function findExistsPageIndex(url) {
+  var pages = getCurrentPages();
+  var len = pages.length;
+  while (len--) {
+    var page = pages[len];
+    if (page.$page && page.$page.fullPath === url) {
+      return len;
+    }
+  }
+  return -1;
+}
+
+var redirectTo = {
+  name: function name(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.delta) {
+      return 'navigateBack';
+    }
+    return 'redirectTo';
+  },
+  args: function args(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.url) {
+      var existsPageIndex = findExistsPageIndex(fromArgs.url);
+      if (existsPageIndex !== -1) {
+        var delta = getCurrentPages().length - 1 - existsPageIndex;
+        if (delta > 0) {
+          fromArgs.delta = delta;
+        }
+      }
+    }
+  } };
 
 
 var previewImage = {
@@ -400,6 +432,8 @@ var previewImage = {
   } };
 
 
+// import navigateTo from 'uni-helpers/navigate-to'
+
 function addSafeAreaInsets(result) {
   if (result.safeArea) {
     var safeArea = result.safeArea;
@@ -412,6 +446,8 @@ function addSafeAreaInsets(result) {
   }
 }
 var protocols = {
+  redirectTo: redirectTo,
+  // navigateTo,  // 由于在微信开发者工具的页面参数，会显示__id__参数，因此暂时关闭mp-weixin对于navigateTo的AOP
   previewImage: previewImage,
   getSystemInfo: {
     returnValue: addSafeAreaInsets },
@@ -421,7 +457,10 @@ var protocols = {
 
 
 var todos = [
-'vibrate'];
+'vibrate',
+'preloadPage',
+'unPreloadPage',
+'loadSubPackage'];
 
 var canIUses = [];
 
@@ -453,7 +492,9 @@ function processArgs(methodName, fromArgs) {var argsOption = arguments.length > 
           toArgs[keyOption.name ? keyOption.name : key] = keyOption.value;
         }
       } else if (CALLBACKS.indexOf(key) !== -1) {
-        toArgs[key] = processCallback(methodName, fromArgs[key], returnValue);
+        if (isFn(fromArgs[key])) {
+          toArgs[key] = processCallback(methodName, fromArgs[key], returnValue);
+        }
       } else {
         if (!keepFromArgs) {
           toArgs[key] = fromArgs[key];
@@ -494,7 +535,12 @@ function wrapper(methodName, method) {
       if (typeof arg2 !== 'undefined') {
         args.push(arg2);
       }
-      var returnValue = wx[options.name || methodName].apply(wx, args);
+      if (isFn(options.name)) {
+        methodName = options.name(arg1);
+      } else if (isStr(options.name)) {
+        methodName = options.name;
+      }
+      var returnValue = wx[methodName].apply(wx, args);
       if (isSyncApi(methodName)) {// 同步 api
         return processReturnValue(methodName, returnValue, options.returnValue, isContextApi(methodName));
       }
@@ -568,10 +614,6 @@ var extraApi = /*#__PURE__*/Object.freeze({
 
 
 var getEmitter = function () {
-  if (typeof getUniEmitter === 'function') {
-    /* eslint-disable no-undef */
-    return getUniEmitter;
-  }
   var Emitter;
   return function getUniEmitter() {
     if (!Emitter) {
@@ -658,6 +700,8 @@ Component = function Component() {var options = arguments.length > 0 && argument
 var PAGE_EVENT_HOOKS = [
 'onPullDownRefresh',
 'onReachBottom',
+'onAddToFavorites',
+'onShareTimeline',
 'onShareAppMessage',
 'onPageScroll',
 'onResize',
@@ -757,7 +801,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"HandwritingBoard","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -859,6 +903,11 @@ function initProperties(props) {var isBehavior = arguments.length > 1 && argumen
       type: String,
       value: '' };
 
+    // 用于字节跳动小程序模拟抽象节点
+    properties.generic = {
+      type: Object,
+      value: null };
+
     properties.vueSlots = { // 小程序不能直接定义 $slots 的 props，所以通过 vueSlots 转换到 $slots
       type: null,
       value: [],
@@ -944,7 +993,18 @@ function getExtraValue(vm, dataPathsArray) {
       var propPath = dataPathArray[1];
       var valuePath = dataPathArray[3];
 
-      var vFor = dataPath ? vm.__get_value(dataPath, context) : context;
+      var vFor;
+      if (Number.isInteger(dataPath)) {
+        vFor = dataPath;
+      } else if (!dataPath) {
+        vFor = context;
+      } else if (typeof dataPath === 'string' && dataPath) {
+        if (dataPath.indexOf('#s#') === 0) {
+          vFor = dataPath.substr(3);
+        } else {
+          vFor = vm.__get_value(dataPath, context);
+        }
+      }
 
       if (Number.isInteger(vFor)) {
         context = value;
@@ -994,6 +1054,12 @@ function processEventExtra(vm, extra, event) {
         } else {
           if (dataPath === '$event') {// $event
             extraObj['$' + index] = event;
+          } else if (dataPath === 'arguments') {
+            if (event.detail && event.detail.__args__) {
+              extraObj['$' + index] = event.detail.__args__;
+            } else {
+              extraObj['$' + index] = [event];
+            }
           } else if (dataPath.indexOf('$event.') === 0) {// $event.target.value
             extraObj['$' + index] = vm.__get_value(dataPath.replace('$event.', ''), event);
           } else {
@@ -1074,6 +1140,15 @@ function isMatchEventType(eventType, optType) {
 
 }
 
+function getContextVm(vm) {
+  var $parent = vm.$parent;
+  // 父组件是 scoped slots 或者其他自定义组件时继续查找
+  while ($parent && $parent.$parent && ($parent.$options.generic || $parent.$parent.$options.generic || $parent.$scope._$vuePid)) {
+    $parent = $parent.$parent;
+  }
+  return $parent && $parent.$parent;
+}
+
 function handleEvent(event) {var _this = this;
   event = wrapper$1(event);
 
@@ -1106,12 +1181,8 @@ function handleEvent(event) {var _this = this;
         var methodName = eventArray[0];
         if (methodName) {
           var handlerCtx = _this.$vm;
-          if (
-          handlerCtx.$options.generic &&
-          handlerCtx.$parent &&
-          handlerCtx.$parent.$parent)
-          {// mp-weixin,mp-toutiao 抽象节点模拟 scoped slots
-            handlerCtx = handlerCtx.$parent.$parent;
+          if (handlerCtx.$options.generic) {// mp-weixin,mp-toutiao 抽象节点模拟 scoped slots
+            handlerCtx = getContextVm(handlerCtx) || handlerCtx;
           }
           if (methodName === '$emit') {
             handlerCtx.$emit.apply(handlerCtx,
@@ -1135,14 +1206,17 @@ function handleEvent(event) {var _this = this;
             }
             handler.once = true;
           }
-          ret.push(handler.apply(handlerCtx, processEventArgs(
+          var params = processEventArgs(
           _this.$vm,
           event,
           eventArray[1],
           eventArray[2],
           isCustom,
-          methodName)));
+          methodName);
 
+          // 参数尾部增加原始事件对象用于复杂表达式内获取额外数据
+          // eslint-disable-next-line no-sparse-arrays
+          ret.push(handler.apply(handlerCtx, (Array.isArray(params) ? params : []).concat([,,,,,,,,,, event])));
         }
       });
     }
@@ -1161,7 +1235,9 @@ var hooks = [
 'onShow',
 'onHide',
 'onError',
-'onPageNotFound'];
+'onPageNotFound',
+'onThemeChange',
+'onUnhandledRejection'];
 
 
 function parseBaseApp(vm, _ref3)
@@ -1275,16 +1351,28 @@ function initRelation(detail) {
   this.triggerEvent('__l', detail);
 }
 
+function selectAllComponents(mpInstance, selector, $refs) {
+  var components = mpInstance.selectAllComponents(selector);
+  components.forEach(function (component) {
+    var ref = component.dataset.ref;
+    $refs[ref] = component.$vm || component;
+    {
+      if (component.dataset.vueGeneric === 'scoped') {
+        component.selectAllComponents('.scoped-ref').forEach(function (scopedComponent) {
+          selectAllComponents(scopedComponent, selector, $refs);
+        });
+      }
+    }
+  });
+}
+
 function initRefs(vm) {
   var mpInstance = vm.$scope;
   Object.defineProperty(vm, '$refs', {
     get: function get() {
       var $refs = {};
-      var components = mpInstance.selectAllComponents('.vue-ref');
-      components.forEach(function (component) {
-        var ref = component.dataset.ref;
-        $refs[ref] = component.$vm || component;
-      });
+      selectAllComponents(mpInstance, '.vue-ref', $refs);
+      // TODO 暂不考虑 for 中的 scoped
       var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
       forComponents.forEach(function (component) {
         var ref = component.dataset.ref;
@@ -1324,9 +1412,79 @@ function parseApp(vm) {
 
 }
 
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
 function createApp(vm) {
+  _vue.default.prototype.getOpenerEventChannel = function () {
+    // 微信小程序使用自身getOpenerEventChannel
+    {
+      return this.$scope.getOpenerEventChannel();
+    }
+  };
+  var callHook = _vue.default.prototype.__call_hook;
+  _vue.default.prototype.__call_hook = function (hook, args) {
+    if (hook === 'onLoad' && args && args.__id__) {
+      this.__eventChannel__ = getEventChannel(args.__id__);
+      delete args.__id__;
+    }
+    return callHook.call(this, hook, args);
+  };
   App(parseApp(vm));
   return vm;
+}
+
+var encodeReserveRE = /[!'()*]/g;
+var encodeReserveReplacer = function encodeReserveReplacer(c) {return '%' + c.charCodeAt(0).toString(16);};
+var commaRE = /%2C/g;
+
+// fixed encodeURIComponent which is more conformant to RFC3986:
+// - escapes [!'()*]
+// - preserve commas
+var encode = function encode(str) {return encodeURIComponent(str).
+  replace(encodeReserveRE, encodeReserveReplacer).
+  replace(commaRE, ',');};
+
+function stringifyQuery(obj) {var encodeStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : encode;
+  var res = obj ? Object.keys(obj).map(function (key) {
+    var val = obj[key];
+
+    if (val === undefined) {
+      return '';
+    }
+
+    if (val === null) {
+      return encodeStr(key);
+    }
+
+    if (Array.isArray(val)) {
+      var result = [];
+      val.forEach(function (val2) {
+        if (val2 === undefined) {
+          return;
+        }
+        if (val2 === null) {
+          result.push(encodeStr(key));
+        } else {
+          result.push(encodeStr(key) + '=' + encodeStr(val2));
+        }
+      });
+      return result.join('&');
+    }
+
+    return encodeStr(key) + '=' + encodeStr(val);
+  }).filter(function (x) {return x.length > 0;}).join('&') : null;
+  return res ? "?".concat(res) : '';
 }
 
 function parseBaseComponent(vueComponentOptions)
@@ -1451,9 +1609,15 @@ function parseBasePage(vuePageOptions, _ref6)
 
   initHooks(pageOptions.methods, hooks$1, vuePageOptions);
 
-  pageOptions.methods.onLoad = function (args) {
-    this.$vm.$mp.query = args; // 兼容 mpvue
-    this.$vm.__call_hook('onLoad', args);
+  pageOptions.methods.onLoad = function (query) {
+    this.options = query;
+    var copyQuery = Object.assign({}, query);
+    delete copyQuery.__id__;
+    this.$page = {
+      fullPath: '/' + (this.route || this.is) + stringifyQuery(copyQuery) };
+
+    this.$vm.$mp.query = query; // 兼容 mpvue
+    this.$vm.__call_hook('onLoad', query);
   };
 
   return pageOptions;
@@ -1495,7 +1659,7 @@ var uni = {};
 if (typeof Proxy !== 'undefined' && "mp-weixin" !== 'app-plus') {
   uni = new Proxy({}, {
     get: function get(target, name) {
-      if (target[name]) {
+      if (hasOwn(target, name)) {
         return target[name];
       }
       if (baseApi[name]) {
@@ -2327,12 +2491,10 @@ if (true) {
   };
 
   formatComponentName = function (vm, includeFile) {
-    {
-      if(vm.$scope && vm.$scope.is){
-        return vm.$scope.is
-      }
-    }
     if (vm.$root === vm) {
+      if (vm.$options && vm.$options.__file) { // fixed by xxxxxx
+        return ('') + vm.$options.__file
+      }
       return '<Root>'
     }
     var options = typeof vm === 'function' && vm.cid != null
@@ -2367,7 +2529,7 @@ if (true) {
     if (vm._isVue && vm.$parent) {
       var tree = [];
       var currentRecursiveSequence = 0;
-      while (vm) {
+      while (vm && vm.$options.name !== 'PageBody') {
         if (tree.length > 0) {
           var last = tree[tree.length - 1];
           if (last.constructor === vm.constructor) {
@@ -2379,7 +2541,7 @@ if (true) {
             currentRecursiveSequence = 0;
           }
         }
-        tree.push(vm);
+        !vm.$options.isReserved && tree.push(vm);
         vm = vm.$parent;
       }
       return '\n\nfound in\n\n' + tree
@@ -2402,13 +2564,7 @@ var uid = 0;
  * directives subscribing to it.
  */
 var Dep = function Dep () {
-  // fixed by xxxxxx (nvue vuex)
-  /* eslint-disable no-undef */
-  if(typeof SharedObject !== 'undefined'){
-    this.id = SharedObject.uid++;
-  } else {
-    this.id = uid++;
-  }
+  this.id = uid++;
   this.subs = [];
 };
 
@@ -2445,18 +2601,20 @@ Dep.prototype.notify = function notify () {
 // can be evaluated at a time.
 // fixed by xxxxxx (nvue shared vuex)
 /* eslint-disable no-undef */
-Dep.SharedObject = typeof SharedObject !== 'undefined' ? SharedObject : {};
+Dep.SharedObject = {};
 Dep.SharedObject.target = null;
 Dep.SharedObject.targetStack = [];
 
 function pushTarget (target) {
   Dep.SharedObject.targetStack.push(target);
   Dep.SharedObject.target = target;
+  Dep.target = target;
 }
 
 function popTarget () {
   Dep.SharedObject.targetStack.pop();
   Dep.SharedObject.target = Dep.SharedObject.targetStack[Dep.SharedObject.targetStack.length - 1];
+  Dep.target = Dep.SharedObject.target;
 }
 
 /*  */
@@ -7225,7 +7383,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"HandwritingBoard","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7246,14 +7404,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"HandwritingBoard","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"HandwritingBoard","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7295,6 +7453,16 @@ function cloneWithData(vm) {
     ret[key] = vm[key];
     return ret
   }, ret);
+
+  // vue-composition-api
+  var compositionApiState = vm.__composition_api_state__ || vm.__secret_vfa_state__;
+  var rawBindings = compositionApiState && compositionApiState.rawBindings;
+  if (rawBindings) {
+    Object.keys(rawBindings).forEach(function (key) {
+      ret[key] = vm[key];
+    });
+  }
+
   //TODO 需要把无用数据处理掉，比如 list=>l0 则 list 需要移除，否则多传输一份数据
   Object.assign(ret, vm.$mp.data || {});
   if (
@@ -7329,7 +7497,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"HandwritingBoard","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7501,7 +7669,8 @@ function getTarget(obj, path) {
 
 function internalMixin(Vue) {
 
-  Vue.config.errorHandler = function(err) {
+  Vue.config.errorHandler = function(err, vm, info) {
+    Vue.util.warn(("Error in " + info + ": \"" + (err.toString()) + "\""), vm);
     console.error(err);
     /* eslint-disable no-undef */
     var app = getApp();
@@ -7616,7 +7785,7 @@ function internalMixin(Vue) {
   };
 
   Vue.prototype.__map = function(val, iteratee) {
-    //TODO 暂不考虑 string,number
+    //TODO 暂不考虑 string
     var ret, i, l, keys, key;
     if (Array.isArray(val)) {
       ret = new Array(val.length);
@@ -7630,6 +7799,13 @@ function internalMixin(Vue) {
       for (i = 0, l = keys.length; i < l; i++) {
         key = keys[i];
         ret[key] = iteratee(val[key], key, i);
+      }
+      return ret
+    } else if (typeof val === 'number') {
+      ret = new Array(val);
+      for (i = 0, l = val; i < l; i++) {
+        // 第一个参数暂时仍和小程序一致
+        ret[i] = iteratee(i, i);
       }
       return ret
     }
@@ -7646,7 +7822,10 @@ var LIFECYCLE_HOOKS$1 = [
     'onShow',
     'onHide',
     'onUniNViewMessage',
+    'onPageNotFound',
+    'onThemeChange',
     'onError',
+    'onUnhandledRejection',
     //Page
     'onLoad',
     // 'onShow',
@@ -7656,6 +7835,8 @@ var LIFECYCLE_HOOKS$1 = [
     'onPullDownRefresh',
     'onReachBottom',
     'onTabItemTap',
+    'onAddToFavorites',
+    'onShareTimeline',
     'onShareAppMessage',
     'onResize',
     'onPageScroll',
@@ -7723,403 +7904,14 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 24:
-/*!*****************************************************************************************!*\
-  !*** C:/Users/小楼昨夜/Desktop/miniprogram/uni-app/HandwritingBoard/utils/signature_pad.js ***!
-  \*****************************************************************************************/
+/***/ 29:
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*!
- * Signature Pad v2.2.0
- * https://github.com/szimek/signature_pad
- *
- * Copyright 2017 Szymon Nowak
- * Released under the MIT license
- *
- * The main idea and some parts of the code (e.g. drawing variable width Bézier curve) are taken from:
- * http://corner.squareup.com/2012/07/smoother-signatures.html
- *
- * Implementation of interpolation using cubic Bézier curves is taken from:
- * http://benknowscode.wordpress.com/2012/09/14/path-interpolation-using-cubic-bezier-and-control-point-estimation-in-javascript
- *
- * Algorithm for approximated length of a Bézier curve is taken from:
- * http://www.lemoda.net/maths/bezier-length/index.html
- *
- */
-
-(function (global, factory) {
-   true ? module.exports = factory() :
-  undefined;
-})(this, function () {
-  'use strict';
-
-  function Point(x, y, time) {
-    this.x = x;
-    this.y = y;
-    this.time = time || new Date().getTime();
-  }
-
-  Point.prototype.velocityFrom = function (start) {
-    return this.time !== start.time ? this.distanceTo(start) / (this.time - start.time) : 1;
-  };
-
-  Point.prototype.distanceTo = function (start) {
-    return Math.sqrt(Math.pow(this.x - start.x, 2) + Math.pow(this.y - start.y, 2));
-  };
-
-  function Bezier(startPoint, control1, control2, endPoint) {
-    this.startPoint = startPoint;
-    this.control1 = control1;
-    this.control2 = control2;
-    this.endPoint = endPoint;
-  }
-
-  // Returns approximated length.
-  Bezier.prototype.length = function () {
-    var steps = 10;
-    var length = 0;
-    var px = void 0;
-    var py = void 0;
-
-    for (var i = 0; i <= steps; i += 1) {
-      var t = i / steps;
-      var cx = this._point(t, this.startPoint.x, this.control1.x, this.control2.x, this.endPoint.x);
-      var cy = this._point(t, this.startPoint.y, this.control1.y, this.control2.y, this.endPoint.y);
-      if (i > 0) {
-        var xdiff = cx - px;
-        var ydiff = cy - py;
-        length += Math.sqrt(xdiff * xdiff + ydiff * ydiff);
-      }
-      px = cx;
-      py = cy;
-    }
-
-    return length;
-  };
-
-  /* eslint-disable no-multi-spaces, space-in-parens */
-  Bezier.prototype._point = function (t, start, c1, c2, end) {
-    return start * (1.0 - t) * (1.0 - t) * (1.0 - t) + 3.0 * c1 * (1.0 - t) * (1.0 - t) * t + 3.0 * c2 * (1.0 - t) * t * t + end * t * t * t;
-  };
-
-  /* eslint-disable */
-
-  // http://stackoverflow.com/a/27078401/815507
-  function throttle(func, wait, options) {
-    var context, args, result;
-    var timeout = null;
-    var previous = 0;
-    if (!options) options = {};
-    var later = function later() {
-      previous = options.leading === false ? 0 : Date.now();
-      timeout = null;
-      result = func.apply(context, args);
-      if (!timeout) context = args = null;
-    };
-    return function () {
-      var now = Date.now();
-      if (!previous && options.leading === false) previous = now;
-      var remaining = wait - (now - previous);
-      context = this;
-      args = arguments;
-      if (remaining <= 0 || remaining > wait) {
-        if (timeout) {
-          clearTimeout(timeout);
-          timeout = null;
-        }
-        previous = now;
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      } else if (!timeout && options.trailing !== false) {
-        timeout = setTimeout(later, remaining);
-      }
-      return result;
-    };
-  }
-
-  function SignaturePad(canvas, options) {
-    var self = this;
-    var opts = options || {};
-
-    this.velocityFilterWeight = opts.velocityFilterWeight || 0.7;
-    this.minWidth = opts.minWidth || 0.5;
-    this.maxWidth = opts.maxWidth || 2.5;
-    this.throttle = 'throttle' in opts ? opts.throttle : 16; // in miliseconds
-
-    if (this.throttle) {
-      this._strokeMoveUpdate = throttle(SignaturePad.prototype._strokeUpdate, this.throttle);
-    } else {
-      this._strokeMoveUpdate = SignaturePad.prototype._strokeUpdate;
-    }
-
-    this.dotSize = opts.dotSize || function () {
-      return (this.minWidth + this.maxWidth) / 2;
-    };
-    this.penColor = opts.penColor || 'black'; //签字板的颜色
-    this.backgroundColor = opts.backgroundColor || 'rgba(0,0,0,0)';
-    this.onBegin = opts.onBegin;
-    this.onEnd = opts.onEnd;
-    this.devicePixelRatio = opts.devicePixelRatio || 1;
-    this.lineWidth = opts.lineWidth || 1; //签字板的粗细
-    this._canvas = canvas;
-    this._ctx = canvas;
-    this.clear();
-
-    // We need add these inline so they are available to unbind while still having
-    // access to 'self' we could use _.bind but it's not worth adding a dependency.
-
-    this._handleTouchStart = function (event, data) {
-      self.penColor = data.penColor || self.penColor;
-      self.lineWidth = data.lineWidth || self.lineWidth;
-      if (event.touches.length === 1) {
-        var touch = event.changedTouches[0];
-        self._strokeBegin(touch);
-      }
-    };
-
-    this._handleTouchMove = function (event) {
-      // Prevent scrolling.
-      var touch = event.touches[0];
-      self._strokeMoveUpdate(touch);
-    };
-
-    this._handleTouchEnd = function (event) {
-      self._strokeEnd(event);
-    };
-    this.clear = function () {
-      var ctx = this._ctx;
-      var canvas = this._canvas;
-
-      ctx.fillStyle = this.backgroundColor;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.draw();
-      this._data = [];
-      this._reset();
-      this._isEmpty = true;
-    };
-  }
-
-  // Public methods
-  SignaturePad.prototype.clear = function () {
-    var ctx = this._ctx;
-    var canvas = this._canvas;
-
-    ctx.fillStyle = this.backgroundColor;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    this._data = [];
-    this._reset();
-    this._isEmpty = true;
-  };
-
-  SignaturePad.prototype.isEmpty = function () {
-    return this._isEmpty;
-  };
-
-
-  // Private methods
-  SignaturePad.prototype._strokeBegin = function (event) {
-    this._data.push([]);
-    this._reset();
-    this._strokeUpdate(event);
-
-    if (typeof this.onBegin === 'function') {
-      this.onBegin(event);
-    }
-  };
-
-  SignaturePad.prototype._strokeUpdate = function (event) {
-    var x = event.x;
-    var y = event.y;
-
-    var point = this._createPoint(x, y);
-
-    var _addPoint = this._addPoint(point),
-    curve = _addPoint.curve,
-    widths = _addPoint.widths;
-
-    if (curve && widths) {
-      this._drawCurve(curve, widths.start, widths.end);
-    }
-    this._data[this._data.length - 1].push({
-      x: point.x,
-      y: point.y,
-      time: point.time,
-      color: this.penColor });
-
-  };
-
-  SignaturePad.prototype._strokeEnd = function (event) {
-    var canDrawCurve = this.points.length > 2;
-    var point = this.points[0];
-
-    if (!canDrawCurve && point) {
-      this._drawDot(point);
-    }
-
-    if (typeof this.onEnd === 'function') {
-      this.onEnd(event);
-    }
-  };
-
-  SignaturePad.prototype._reset = function () {
-    this.points = [];
-    this._lastVelocity = 0;
-    this._lastWidth = (this.minWidth + this.maxWidth) / 2;
-    this._ctx.fillStyle = this.penColor;
-  };
-
-  SignaturePad.prototype._createPoint = function (x, y, time) {
-    var rect = {
-      left: 10,
-      top: 10 };
-
-    return new Point(x - rect.left, y - rect.top, time || new Date().getTime());
-  };
-
-  SignaturePad.prototype._addPoint = function (point) {
-    var points = this.points;
-    var tmp = void 0;
-
-    points.push(point);
-    if (points.length > 2) {
-      // To reduce the initial lag make it work with 3 points
-      // by copying the first point to the beginning.
-      if (points.length === 3) points.unshift(points[0]);
-
-      tmp = this._calculateCurveControlPoints(points[0], points[1], points[2]);
-      var c2 = tmp.c2;
-      tmp = this._calculateCurveControlPoints(points[1], points[2], points[3]);
-      var c3 = tmp.c1;
-      var curve = new Bezier(points[1], c2, c3, points[2]);
-      var widths = this._calculateCurveWidths(curve);
-      // Remove the first element from the list,
-      // so that we always have no more than 4 points in points array.
-      points.shift();
-
-      return { curve: curve, widths: widths };
-    }
-
-    return {};
-  };
-
-  SignaturePad.prototype._calculateCurveControlPoints = function (s1, s2, s3) {
-    var dx1 = s1.x - s2.x;
-    var dy1 = s1.y - s2.y;
-    var dx2 = s2.x - s3.x;
-    var dy2 = s2.y - s3.y;
-    var m1 = { x: (s1.x + s2.x) / 2.0, y: (s1.y + s2.y) / 2.0 };
-    var m2 = { x: (s2.x + s3.x) / 2.0, y: (s2.y + s3.y) / 2.0 };
-
-    var l1 = Math.sqrt(dx1 * dx1 + dy1 * dy1);
-    var l2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
-
-    var dxm = m1.x - m2.x;
-    var dym = m1.y - m2.y;
-
-    var k = l2 / (l1 + l2);
-    var cm = { x: m2.x + dxm * k, y: m2.y + dym * k };
-
-    var tx = s2.x - cm.x;
-    var ty = s2.y - cm.y;
-
-    return {
-      c1: new Point(m1.x + tx, m1.y + ty),
-      c2: new Point(m2.x + tx, m2.y + ty) };
-
-  };
-
-  SignaturePad.prototype._calculateCurveWidths = function (curve) {
-    var startPoint = curve.startPoint;
-    var endPoint = curve.endPoint;
-    var widths = { start: null, end: null };
-
-    var velocity = this.velocityFilterWeight * endPoint.velocityFrom(startPoint) + (1 - this.velocityFilterWeight) * this._lastVelocity;
-
-    var newWidth = this._strokeWidth(velocity);
-
-    widths.start = this._lastWidth;
-    widths.end = newWidth;
-
-    this._lastVelocity = velocity;
-    this._lastWidth = newWidth;
-
-    return widths;
-  };
-
-  SignaturePad.prototype._strokeWidth = function (velocity) {
-    return Math.max(this.maxWidth / (velocity + 1), this.minWidth);
-  };
-
-  SignaturePad.prototype._drawPoint = function (x, y, size) {
-    var ctx = this._ctx;
-    var lineWidth = this.lineWidth;
-    ctx.moveTo(x, y);
-    ctx.arc(x, y, size * lineWidth, 0, 2 * Math.PI, false);
-    this._isEmpty = false;
-  };
-
-  SignaturePad.prototype._drawCurve = function (curve, startWidth, endWidth) {
-    var ctx = this._ctx;
-    var widthDelta = endWidth - startWidth;
-    var drawSteps = Math.floor(curve.length());
-
-    ctx.beginPath();
-    for (var i = 0; i < drawSteps; i += 1) {
-      // Calculate the Bezier (x, y) coordinate for this step.
-      var t = i / drawSteps;
-      var tt = t * t;
-      var ttt = tt * t;
-      var u = 1 - t;
-      var uu = u * u;
-      var uuu = uu * u;
-
-      var x = uuu * curve.startPoint.x;
-      x += 3 * uu * t * curve.control1.x;
-      x += 3 * u * tt * curve.control2.x;
-      x += ttt * curve.endPoint.x;
-
-      var y = uuu * curve.startPoint.y;
-      y += 3 * uu * t * curve.control1.y;
-      y += 3 * u * tt * curve.control2.y;
-      y += ttt * curve.endPoint.y;
-
-      var width = startWidth + ttt * widthDelta;
-      this._drawPoint(x, y, width);
-    }
-    var penColor = this.penColor;
-    ctx.closePath();
-    ctx.setStrokeStyle(penColor);
-    ctx.setFillStyle(penColor);
-    ctx.fill();
-    ctx.stroke();
-    ctx.draw(true);
-  };
-
-  SignaturePad.prototype._drawDot = function (point) {
-    var ctx = this._ctx;
-    var width = typeof this.dotSize === 'function' ? this.dotSize() : this.dotSize;
-    var penColor = this.penColor;
-    ctx.beginPath();
-    this._drawPoint(point.x, point.y, width);
-    ctx.closePath();
-    ctx.setStrokeStyle(penColor);
-    ctx.setFillStyle(penColor);
-    ctx.fill();
-    ctx.stroke();
-    ctx.draw(true);
-  };
-
-  SignaturePad.prototype.toData = function () {
-    return this._data;
-  };
-
-  return SignaturePad;
-
-});
+module.exports = __webpack_require__(/*! regenerator-runtime */ 30);
 
 /***/ }),
 
@@ -8155,17 +7947,6 @@ module.exports = g;
 /***/ }),
 
 /***/ 30:
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ 31);
-
-/***/ }),
-
-/***/ 31:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -8196,7 +7977,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 32);
+module.exports = __webpack_require__(/*! ./runtime */ 31);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -8213,7 +7994,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 32:
+/***/ 31:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -8945,10 +8726,412 @@ if (hadRuntime) {
 
 /***/ }),
 
+/***/ 32:
+/*!**************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/1/sg/utils/signature.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Handwriting = /*#__PURE__*/function () {
+  // 内置数据
+
+
+
+  //划线轨迹 ; 生成线条的实际点
+
+  // 透明度
+  // 默认压力
+  //顺滑度，用60的距离来计算速度
+  // 笔记倍数
+  // 最小笔画半径
+  // 最大笔画半径
+
+  // 第一次触发
+  //画圆的半径
+
+
+
+
+
+  //裁剪区域
+
+  //笔迹
+
+
+
+  function Handwriting(opts) {_classCallCheck(this, Handwriting);_defineProperty(this, "ctx", '');_defineProperty(this, "canvasWidth", 300);_defineProperty(this, "canvasHeight", 900);_defineProperty(this, "linePrack", []);_defineProperty(this, "currentLine", []);_defineProperty(this, "transparent", 1);_defineProperty(this, "pressure", 0.5);_defineProperty(this, "smoothness", 100);_defineProperty(this, "lineSize", 1.5);_defineProperty(this, "lineMin", 0.5);_defineProperty(this, "lineMax", 2);_defineProperty(this, "currentPoint", {});_defineProperty(this, "firstTouch", true);_defineProperty(this, "radius", 1);_defineProperty(this, "cutArea", { top: 0, right: 0, bottom: 0, left: 0 });_defineProperty(this, "lastPoint", 0);_defineProperty(this, "chirography", []);_defineProperty(this, "startY", 0);_defineProperty(this, "deltaY", 0);_defineProperty(this, "startValue", 0);
+    // console.log(opts);
+    this.lineColor = opts.lineColor || '#1A1A1A'; // 颜色
+    this.slideValue = opts.slideValue || 50;
+    this.canvasName = opts.canvasName || 'handWriting';
+    this.ctx = opts.ctx;
+    this.init();
+  }_createClass(Handwriting, [{ key: "init", value: function init()
+    {
+      this.selectSlideValue(this.slideValue);
+    } }, { key: "setSize", value: function setSize(
+
+    rect) {
+      this.canvasWidth = rect.width;
+      this.canvasHeight = rect.height;
+    }
+
+    // 笔迹开始
+  }, { key: "uploadScaleStart", value: function uploadScaleStart(event) {
+      // console.log('start');
+      var e = event.mp;
+      // console.log(e.touches[0])
+      if (e.type != 'touchstart') return false;
+
+      this.ctx.setFillStyle(this.lineColor); // 初始线条设置颜色
+      this.ctx.setGlobalAlpha(this.transparent); // 设置半透明
+      this.currentPoint = {
+        x: e.touches[0].x,
+        y: e.touches[0].y };
+
+      this.currentLine.unshift({
+        time: new Date().getTime(),
+        dis: 0,
+        x: this.currentPoint.x,
+        y: this.currentPoint.y });
+
+      if (this.firstTouch) {
+        this.cutArea = {
+          top: this.currentPoint.y,
+          right: this.currentPoint.x,
+          bottom: this.currentPoint.y,
+          left: this.currentPoint.x };
+
+        this.firstTouch = false;
+      }
+      this.pointToLine(this.currentLine);
+    }
+    // 笔迹移动
+  }, { key: "uploadScaleMove", value: function uploadScaleMove(event) {
+      // console.log('move');
+      var e = event.mp;
+      if (e.type != 'touchmove') return false;
+      if (e.cancelable) {
+        // 判断默认行为是否已经被禁用
+        if (!e.defaultPrevented) {
+          e.preventDefault();
+        }
+      }
+      var point = {
+        x: e.touches[0].x,
+        y: e.touches[0].y };
+
+      //测试裁剪
+      if (point.y < this.cutArea.top) {
+        this.cutArea.top = point.y;
+      }
+      if (point.y < 0) this.cutArea.top = 0;
+
+      if (point.x > this.cutArea.right) {
+        this.cutArea.right = point.x;
+      }
+      if (this.canvasWidth - point.x <= 0) {
+        this.cutArea.right = this.canvasWidth;
+      }
+      if (point.y > this.cutArea.bottom) {
+        this.cutArea.bottom = point.y;
+      }
+      if (this.canvasHeight - point.y <= 0) {
+        this.cutArea.bottom = this.canvasHeight;
+      }
+      if (point.x < this.cutArea.left) {
+        this.cutArea.left = point.x;
+      }
+      if (point.x < 0) this.cutArea.left = 0;
+
+      this.lastPoint = this.currentPoint;
+      this.currentPoint = point;
+      this.currentLine.unshift({
+        time: new Date().getTime(),
+        dis: this.distance(this.currentPoint, this.lastPoint, 'move'),
+        x: point.x,
+        y: point.y });
+
+      this.pointToLine(this.currentLine);
+    }
+    // 笔迹结束
+  }, { key: "uploadScaleEnd", value: function uploadScaleEnd(event) {
+      var e = event.mp;
+      if (e.type != 'touchend') return 0;
+      // console.log(e);
+      var point = {
+        x: e.changedTouches[0].x,
+        y: e.changedTouches[0].y };
+
+
+      this.lastPoint = this.currentPoint;
+      this.currentPoint = point;
+      this.currentLine.unshift({
+        time: new Date().getTime(),
+        dis: this.distance(this.currentPoint, this.lastPoint, 'end'),
+        x: point.x,
+        y: point.y });
+
+      if (this.currentLine.length > 2) {
+        var info = (this.currentLine[0].time - this.currentLine[this.currentLine.length - 1].time) / this.currentLine.length;
+        //$("#info").text(info.toFixed(2));
+      }
+      //一笔结束，保存笔迹的坐标点，清空，当前笔迹
+      //增加判断是否在手写区域；
+      this.pointToLine(this.currentLine);
+      var currentChirography = {
+        lineSize: this.lineSize,
+        lineColor: this.lineColor };
+
+      this.chirography.unshift(currentChirography);
+      this.linePrack.unshift(this.currentLine);
+      this.currentLine = [];
+    } }, { key: "retDraw", value: function retDraw()
+    {
+      this.ctx.clearRect(0, 0, 700, 730);
+      this.ctx.draw();
+    } }, { key: "clear", value: function clear()
+
+    {
+      this.linePrack = [];
+      this.currentLine = [];
+      this.retDraw();
+    } }, { key: "isEmpty", value: function isEmpty()
+
+    {
+      return this.linePrack.length === 0;
+    }
+
+    //画两点之间的线条；参数为:line，会绘制最近的开始的两个点；
+  }, { key: "pointToLine", value: function pointToLine(line) {
+      this.calcBethelLine(line);
+      // this.calcBethelLine1(line);
+      return;
+    }
+    //计算插值的方式；
+  }, { key: "calcBethelLine", value: function calcBethelLine(line) {
+      if (line.length <= 1) {
+        line[0].r = this.radius;
+        return;
+      }
+      var x0,x1,x2,y0,y1,y2,r0,r1,r2,len,lastRadius,dis = 0,
+      time = 0,
+      curveValue = 0.5;
+      if (line.length <= 2) {
+        x0 = line[1].x;
+        y0 = line[1].y;
+        x2 = line[1].x + (line[0].x - line[1].x) * curveValue;
+        y2 = line[1].y + (line[0].y - line[1].y) * curveValue;
+        //x2 = line[1].x;
+        //y2 = line[1].y;
+        x1 = x0 + (x2 - x0) * curveValue;
+        y1 = y0 + (y2 - y0) * curveValue;;
+
+      } else {
+        x0 = line[2].x + (line[1].x - line[2].x) * curveValue;
+        y0 = line[2].y + (line[1].y - line[2].y) * curveValue;
+        x1 = line[1].x;
+        y1 = line[1].y;
+        x2 = x1 + (line[0].x - x1) * curveValue;
+        y2 = y1 + (line[0].y - y1) * curveValue;
+      }
+      //从计算公式看，三个点分别是(x0,y0),(x1,y1),(x2,y2) ；(x1,y1)这个是控制点，控制点不会落在曲线上；实际上，这个点还会手写获取的实际点，却落在曲线上
+      len = this.distance({
+        x: x2,
+        y: y2 },
+      {
+        x: x0,
+        y: y0 },
+      'calc');
+      lastRadius = this.radius;
+      for (var _n = 0; _n < line.length - 1; _n++) {
+        dis += line[_n].dis;
+        time += line[_n].time - line[_n + 1].time;
+        if (dis > this.smoothness) break;
+      }
+      this.radius = Math.min(time / len * this.pressure + this.lineMin, this.lineMax) * this.lineSize;
+      line[0].r = this.radius;
+      //计算笔迹半径；
+      if (line.length <= 2) {
+        r0 = (lastRadius + this.radius) / 2;
+        r1 = r0;
+        r2 = r1;
+        //return;
+      } else {
+        r0 = (line[2].r + line[1].r) / 2;
+        r1 = line[1].r;
+        r2 = (line[1].r + line[0].r) / 2;
+      }
+      var n = 5;
+      var point = [];
+      for (var i = 0; i < n; i++) {
+        var t = i / (n - 1);
+        var x = (1 - t) * (1 - t) * x0 + 2 * t * (1 - t) * x1 + t * t * x2;
+        var y = (1 - t) * (1 - t) * y0 + 2 * t * (1 - t) * y1 + t * t * y2;
+        var r = lastRadius + (this.radius - lastRadius) / n * i;
+        point.push({
+          x: x,
+          y: y,
+          r: r });
+
+        if (point.length == 3) {
+          var a = this.ctaCalc(point[0].x, point[0].y, point[0].r, point[1].x, point[1].y, point[1].r, point[2].x, point[2].y,
+          point[2].r);
+          a[0].color = this.lineColor;
+          this.bethelDraw(a, 1);
+          point = [{
+            x: x,
+            y: y,
+            r: r }];
+
+        }
+      }
+    }
+    //求两点之间距离
+  }, { key: "distance", value: function distance(a, b, type) {
+      var x = b.x - a.x;
+      var y = b.y - a.y;
+      return Math.sqrt(x * x + y * y) * 5;
+    } }, { key: "ctaCalc", value: function ctaCalc(
+    x0, y0, r0, x1, y1, r1, x2, y2, r2) {
+      var a = [],
+      vx01,vy01,norm,n_x0,n_y0,vx21,vy21,n_x2,n_y2;
+      vx01 = x1 - x0;
+      vy01 = y1 - y0;
+      norm = Math.sqrt(vx01 * vx01 + vy01 * vy01 + 0.0001) * 2;
+      vx01 = vx01 / norm * r0;
+      vy01 = vy01 / norm * r0;
+      n_x0 = vy01;
+      n_y0 = -vx01;
+      vx21 = x1 - x2;
+      vy21 = y1 - y2;
+      norm = Math.sqrt(vx21 * vx21 + vy21 * vy21 + 0.0001) * 2;
+      vx21 = vx21 / norm * r2;
+      vy21 = vy21 / norm * r2;
+      n_x2 = -vy21;
+      n_y2 = vx21;
+      a.push({
+        mx: x0 + n_x0,
+        my: y0 + n_y0,
+        color: "#1A1A1A" });
+
+      a.push({
+        c1x: x1 + n_x0,
+        c1y: y1 + n_y0,
+        c2x: x1 + n_x2,
+        c2y: y1 + n_y2,
+        ex: x2 + n_x2,
+        ey: y2 + n_y2 });
+
+      a.push({
+        c1x: x2 + n_x2 - vx21,
+        c1y: y2 + n_y2 - vy21,
+        c2x: x2 - n_x2 - vx21,
+        c2y: y2 - n_y2 - vy21,
+        ex: x2 - n_x2,
+        ey: y2 - n_y2 });
+
+      a.push({
+        c1x: x1 - n_x2,
+        c1y: y1 - n_y2,
+        c2x: x1 - n_x0,
+        c2y: y1 - n_y0,
+        ex: x0 - n_x0,
+        ey: y0 - n_y0 });
+
+      a.push({
+        c1x: x0 - n_x0 - vx01,
+        c1y: y0 - n_y0 - vy01,
+        c2x: x0 + n_x0 - vx01,
+        c2y: y0 + n_y0 - vy01,
+        ex: x0 + n_x0,
+        ey: y0 + n_y0 });
+
+      a[0].mx = a[0].mx.toFixed(1);
+      a[0].mx = parseFloat(a[0].mx);
+      a[0].my = a[0].my.toFixed(1);
+      a[0].my = parseFloat(a[0].my);
+      for (var i = 1; i < a.length; i++) {
+        a[i].c1x = a[i].c1x.toFixed(1);
+        a[i].c1x = parseFloat(a[i].c1x);
+        a[i].c1y = a[i].c1y.toFixed(1);
+        a[i].c1y = parseFloat(a[i].c1y);
+        a[i].c2x = a[i].c2x.toFixed(1);
+        a[i].c2x = parseFloat(a[i].c2x);
+        a[i].c2y = a[i].c2y.toFixed(1);
+        a[i].c2y = parseFloat(a[i].c2y);
+        a[i].ex = a[i].ex.toFixed(1);
+        a[i].ex = parseFloat(a[i].ex);
+        a[i].ey = a[i].ey.toFixed(1);
+        a[i].ey = parseFloat(a[i].ey);
+      }
+      return a;
+    } }, { key: "bethelDraw", value: function bethelDraw(
+    point, is_fill, color) {
+      this.ctx.beginPath();
+      this.ctx.moveTo(point[0].mx, point[0].my);
+      if (undefined != color) {
+        this.ctx.setFillStyle(color);
+        this.ctx.setStrokeStyle(color);
+      } else {
+        this.ctx.setFillStyle(point[0].color);
+        this.ctx.setStrokeStyle(point[0].color);
+      }
+      for (var i = 1; i < point.length; i++) {
+        this.ctx.bezierCurveTo(point[i].c1x, point[i].c1y, point[i].c2x, point[i].c2y, point[i].ex, point[i].ey);
+      }
+      this.ctx.stroke();
+      if (undefined != is_fill) {
+        this.ctx.fill(); //填充图形 ( 后绘制的图形会覆盖前面的图形, 绘制时注意先后顺序 )
+      }
+      this.ctx.draw(true);
+    } }, { key: "selectColorEvent", value: function selectColorEvent(
+
+    lineColor) {
+      this.lineColor = lineColor;
+    } }, { key: "selectSlideValue", value: function selectSlideValue(
+
+    slideValue) {
+      switch (slideValue) {
+        case 0:
+          this.lineSize = 0.1;
+          this.lineMin = 0.1;
+          this.lineMax = 0.1;
+          break;
+        case 25:
+          this.lineSize = 1;
+          this.lineMin = 0.5;
+          this.lineMax = 2;
+          break;
+        case 50:
+          this.lineSize = 1.5;
+          this.lineMin = 1;
+          this.lineMax = 3;
+          break;
+        case 75:
+          this.lineSize = 1.5;
+          this.lineMin = 2;
+          this.lineMax = 3.5;
+          break;
+        case 100:
+          this.lineSize = 3;
+          this.lineMin = 2;
+          this.lineMax = 3.5;
+          break;}
+
+    } }]);return Handwriting;}();var _default =
+
+
+Handwriting;exports.default = _default;
+
+/***/ }),
+
 /***/ 4:
-/*!*****************************************************************************!*\
-  !*** C:/Users/小楼昨夜/Desktop/miniprogram/uni-app/HandwritingBoard/pages.json ***!
-  \*****************************************************************************/
+/*!******************************************************!*\
+  !*** C:/Users/Administrator/Desktop/1/sg/pages.json ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

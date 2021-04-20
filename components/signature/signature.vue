@@ -1,97 +1,180 @@
 <template>
 <view class="wrapper">
-	<view class="hand-left">
+	<view class="cu-custom bg-gray " :style="[{height:CustomBar + 'px'}]">
+		<view class="flex align-center justify-between margin-top-xs padding-left" style="position: absolute;" :style="[{width:Custom.left + 'px'},{top:Custom.top + 'px'}]">
+			<view class="flex align-center">
+				<view @click="showIndex = 0">
+					<image src='../../static/brush.png' style="width: 40upx;height: 40upx;position: relative;" >
+					</image>
+					<view v-show="showIndex === 0"  style="border-bottom: 4rpx solid #007AFF;"></view>
+				</view>
+				<view class="margin-left-sm" @click="showIndex = 1">
+					<image src='../../static/text.png' style="width: 40upx;height: 40upx;position: relative;" >
+					</image>
+					<view v-show="showIndex === 1" style="border-bottom: 4rpx solid #007AFF;"></view>
+				</view>
+			</view>
+			<view>
+				<view class="flex" v-show="showIndex === 0">
+					<view v-for="(item,index) in colorList" @click="changeColor" :data-index="index" :key="item.id" class="color-li margin-left-sm" :class="{'li-color':penColorIndex == index}" :style="{backgroundColor: item.value}"></view>
+				</view>
+				<view class="flex" v-show="showIndex === 1">
+					<view v-for="(item,index) in lineWidthList" @click="changeLineWidth" :data-index="index" :key="item.id" class="color-li margin-left-sm" :class="{'li-color':lineWidthIndex == index}" :style="{backgroundColor: item.value}">
+						<text class="text-xs text-gray flex justify-center align-center">{{item.name}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="margin-right">
+				<image src='../../static/Rubber.png' class="margin-right-lg" style="width: 40upx;height: 40upx;" @click="retDraw"></image>
+				<image src='../../static/download.png' style="width: 45upx;height: 45upx;" @click="subCanvas"></image>
+			</view>
+		</view>
+	</view>
+<!-- 	<view class="hand-left">
 		<view class="left-bus">
 			<view v-for="(item,index) in colorList" @click="changeColor" :data-index="index" :key="item.id" class="color-li" :class="{'li-color':penColorIndex == index}" :style="{backgroundColor: item.value}"></view>
 		</view>
 		<view class="center-text">email:xlzy905@outlook.com</view>
 		<view class="right-bus">
 		<button @click="retDraw" class="cu-btn bg-red">清除</button>
-<!-- 		<button @click="preview" class="cu-btn">预览</button> -->
+		<button @click="preview" class="cu-btn">预览</button>
 		<button @click="subCanvas" class="cu-btn bg-green">保存</button>
 		</view>
-	</view>
+	</view> -->
 	<view class="hand-center">
-		<canvas class="hand-writing" disable-scroll="true" @touchstart="uploadScaleStart" @touchmove="uploadScaleMove" @touchend="uploadScaleEnd" canvas-id="handWriting">
-		</canvas>
+<!-- 		<canvas class="hand-writing" disable-scroll="true" @touchstart="uploadScaleStart" @touchmove="uploadScaleMove" @touchend="uploadScaleEnd" canvas-id="handWriting"> -->
+				<canvas
+					class="hand-writing"
+					disable-scroll
+					@touchstart="uploadScaleStart"
+					@touchmove="uploadScaleMove"
+					@touchend="uploadScaleEnd"
+					canvas-id="__signature__canvas"
+				></canvas>
 	</view>
 </view>
 </template>
 
 <script>
-	import SignaturePad from '../../utils/signature_pad.js'
-	let signaturePad = {};
-	let pix = 7;
-	// let penColor = 'red';
-	// let lineWidth = 0.6;
+	import Handwriting from '../../utils/signature.js'
+	const CANVAS_ID = '__signature__canvas';
 	export default {
 		data() {
 			return {
-				penColor: '#e54d42',
-				penColorIndex:1,
-				lineWidth: 0.7,
+				penColor: '#333333', // 画笔颜色
+				penColorIndex:0, 
+				lineWidthIndex:1,
+				lineWidth: 75, // 笔画粗细
+				showIndex:0,
 				isEmpty: true,
+				CustomBar: this.CustomBar,
+				StatusBar: this.StatusBar,
+				Custom:this.Custom,
+				path:'',
 				colorList:[{
 					id:1,
 					name:'墨黑',
 					value:'#333333'
-				},{
+				},
+				{
 					id:2,
-					name:'嫣红',
-					value:'#e54d42'
+					name:'草灰',
+					value:'#8799a3',
 				},{
 					id:3,
-					name:'天蓝',
-					value:'#0081ff',
+					name:'嫣红',
+					value:'#e54d42'
+				}
+				],
+				lineWidthList:[{
+					id:1,
+					name:'小',
+					value:50
+				},
+				{
+					id:2,
+					name:'中',
+					value:75,
+				},{
+					id:3,
+					name:'大',
+					value:100
 				}
 				]
 			}
 		},
 		mounted() {
-        var ctx = uni.createCanvasContext('handWriting',this);
-        const data = {
-            devicePixelRatio: pix,
-        };
-        signaturePad = new SignaturePad(ctx, data);
+				this.sign().then(path => {
+						// console.log(path);
+						this.path = path
+					})
+					.catch(e => {
+						console.log('取消签名', e);
+					});
 		},
 		methods: {
+			sign() {
+				return new Promise((resolve, reject) => {
+					this.resolve = resolve;
+					this.reject = reject;
+					this.$nextTick(() => {
+						let query = uni.createSelectorQuery().in(this);
+						let ctx = uni.createCanvasContext(CANVAS_ID, this);
+						this.handwriting = new Handwriting({
+							lineColor: this.penColor,
+							slideValue: this.lineWidth, // 0, 25, 50, 75, 100
+							canvasName: CANVAS_ID,
+							ctx: ctx
+						});
+						console.log(this.handwriting)
+						// query.select('.handCenter')
+						// 	.boundingClientRect(rect => {
+						// 		this.handwriting.setSize(rect);
+						// 	})
+						// 	.exec();
+					});
+				});
+			},
 			changeColor(e){
 				this.penColor = this.colorList[e.currentTarget.dataset.index].value
 				this.penColorIndex = e.currentTarget.dataset.index
+				this.handwriting.lineColor = this.colorList[e.currentTarget.dataset.index].value
 			},
-		uploadScaleStart(e) {
-		    const item = {
-		        penColor: this.penColor,
-		        lineWidth: this.lineWidth
-		    };
-		    signaturePad._handleTouchStart(e, item);
-		},
-		uploadScaleMove(e) {
-		    signaturePad._handleTouchMove(e);
-		},
-		uploadScaleEnd: function(e) {
-		    signaturePad._handleTouchEnd(e);
-		    this.isEmpty = signaturePad.isEmpty();
-		},
-		retDraw: function() {
-		    signaturePad.clear();
-		    this.isEmpty = signaturePad.isEmpty();
-		},
-		getSysInfo: function() {
-        var that = this
-        uni.getSystemInfo({
-            success: function(res) {
-                pix = res.pixelRatio
-				that.width = res.windowWidth * pix
-				that.height = res.windowHeight * pix
-            }
-        })
+			changeLineWidth(e){
+				this.lineWidth = this.lineWidthList[e.currentTarget.dataset.index].value
+				this.lineWidthIndex = e.currentTarget.dataset.index
+				this.handwriting.slideValue = this.lineWidthList[e.currentTarget.dataset.index].value
+				this.handwriting.init()
+				console.log(this.handwriting)
+			},
+			uploadScaleStart(event) {
+				this.handwriting.uploadScaleStart(event);
+			},
+			uploadScaleMove(event) {
+				this.handwriting.uploadScaleMove(event);
+			},
+			uploadScaleEnd(event) {
+				this.handwriting.uploadScaleEnd(event);
+			},
+			retDraw: function() {
+				console.log('1')
+				this.handwriting.clear();
+			},
+			getSysInfo: function() {
+				var that = this
+				uni.getSystemInfo({
+				success: function(res) {
+					pix = res.pixelRatio
+					that.width = res.windowWidth * pix
+					that.height = res.windowHeight * pix
+				}
+			})
     },
 	//保存图片
   subCanvas: async function() {
-		if (this.isEmpty) {
-		    return false
-		}
+		// if (this.isEmpty) {
+		//     return false
+		// }
 		const img = await this.onConfirm()
 		this.$emit('getImg',img)	
     },
@@ -112,10 +195,8 @@
         const self = this;
 		return new Promise((resolve, reject)=>{
 			uni.canvasToTempFilePath({
-			    canvasId: 'handWriting',
+			    canvasId: CANVAS_ID,
 			    success: function(res) {
-					self.modalShow = false
-					self.hiddenLoading = false
 					resolve(res.tempFilePath)
 			    },
 			    fail: function(res) {
@@ -137,7 +218,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    display: flex;
+/*    display: flex; */
     align-content: center;
     flex-direction: row;
     justify-content: center;
@@ -155,7 +236,6 @@
     flex: 1;
     overflow: hidden;
     box-sizing: border-box;
-	margin-right: 10px;
 }
 
 .hand-left {
@@ -168,8 +248,8 @@
 
 
 .color-li{
-	height:50rpx;
-	width: 50rpx;
+	height:40rpx;
+	width: 40rpx;
 	border-radius: 50%;
 }
 .center-text{

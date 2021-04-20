@@ -6,9 +6,11 @@
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "签名板",
+    "navigationStyle": "custom",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap77.json"
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  }
 }
