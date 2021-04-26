@@ -3,7 +3,10 @@
 	<view class="cu-custom bg-gray " :style="[{height:CustomBar + 'px'}]">
 		<view class="flex align-center justify-between margin-top-xs padding-left" style="position: absolute;" :style="[{width:Custom.left + 'px'},{top:Custom.top + 'px'}]">
 			<view class="flex align-center">
-				<view @click="showIndex = 0">
+				<view class="cuIcon-back text-gray" style="font-size: 40upx;" @click="navBack()">
+					
+				</view>
+				<view class="margin-left-sm" @click="showIndex = 0">
 					<image src='../../static/brush.png' style="width: 40upx;height: 40upx;position: relative;" >
 					</image>
 					<view v-show="showIndex === 0"  style="border-bottom: 4rpx solid #007AFF;"></view>
@@ -178,6 +181,11 @@
 		const img = await this.onConfirm()
 		this.$emit('getImg',img)	
     },
+	navBack(){
+		uni.navigateBack({
+			
+		})
+	},
 	//预览
  async preview(){
 		if (this.isEmpty) {
@@ -248,8 +256,8 @@
 
 
 .color-li{
-	height:40rpx;
-	width: 40rpx;
+	height:35rpx;
+	width: 35rpx;
 	border-radius: 50%;
 }
 .center-text{

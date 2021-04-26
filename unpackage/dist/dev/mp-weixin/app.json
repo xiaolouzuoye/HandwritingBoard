@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/board/board",
+    "pages/coupons/coupons",
+    "pages/wordArt/wordArt"
   ],
   "subPackages": [],
   "window": {
@@ -12,5 +15,6 @@
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

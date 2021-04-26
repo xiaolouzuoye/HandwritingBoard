@@ -1,0 +1,19 @@
+{
+	"passwordSecret": "qwertyuiop",
+	"tokenSecret": "asdfghjkl",
+	"tokenExpiresIn": 7200,
+	"tokenExpiresThreshold": 600,
+	"passwordErrorLimit": 6,
+	"bindTokenToDevice": true,
+	"passwordErrorRetryTime": 3600,
+	"autoSetInviteCode": false,
+	"forceInviteCode": false,
+	"mp-weixin": {
+		"oauth" : {
+			"weixin" : {
+				"appid" : "wx8fab88eb5f654b0a",
+				"appsecret" : "04acd826f0179518e485fc1d705b6528"
+			}
+		}
+	}
+}

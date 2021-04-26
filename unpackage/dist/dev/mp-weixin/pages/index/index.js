@@ -100,33 +100,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
-try {
-  components = {
-    signature: function() {
-      return Promise.all(/*! import() | components/signature/signature */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/signature/signature")]).then(__webpack_require__.bind(null, /*! @/components/signature/signature.vue */ 24))
-    }
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  if (!_vm._isMounted) {
+    _vm.e0 = function($event) {
+      _vm.modalShow = true
+    }
+
+    _vm.e1 = function($event) {
+      _vm.modalShow = false
+    }
+
+    _vm.e2 = function($event) {
+      _vm.modalShow = false
+    }
+  }
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -162,27 +152,144 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
-      title: 'Hello' };
+      title: 'Hello',
+      modalShow: false,
+      picker: [{
+        name: '一笔艺术签',
+        code: 901 },
+      {
+        name: '一笔商务签',
+        code: 905 }],
+
+      index: 0,
+      name: '' };
 
   },
   onLoad: function onLoad() {
 
   },
+  onShareAppMessage: function onShareAppMessage() {
+    return {
+      title: '手写签名板!可以自动生成你的签名',
+      path: '/pages/index/index',
+      imageUrl: '../../static/logo.png' };
+
+  },
   methods: {
-    saveImg: function saveImg(img) {
-      console.log("img", img);
-      uni.saveImageToPhotosAlbum({
-        filePath: img,
+    nav: function nav(url) {
+      uni.navigateTo({
+        url: url });
+
+    },
+    PickerChange: function PickerChange(e) {
+      this.index = e.detail.value;
+    },
+    generate: function generate() {
+      if (this.name === '') {
+        uni.showToast({
+          title: '请输入名称',
+          icon: 'none' });
+
+        return;
+      }
+      uni.showLoading({
+        title: '正在生成' });
+
+      uni.request({
+        url: 'https://wx.xuebage.cn/app/index.php?i=2&t=0&v=1.0.2&from=wxapp&c=entry&a=wxapp&do=generate&m=yj_yishuzi&sign=12934b72d0402f473abf834702a634d5&val=' + this.name + '&font=' + this.picker[this.index].code,
+        method: 'POST',
         success: function success(res) {
           console.log(res);
+          uni.hideLoading();
+          try {
+            uni.navigateTo({
+              url: '../wordArt/wordArt?img=' + res.data.data });
+
+          } catch (e) {
+            //TODO handle the exception
+            uni.showToast({
+              title: '系统繁忙 请稍后再试!' + res,
+              icon: 'none' });
+
+          }
+        },
+        fail: function fail(err) {
+          console.log(err);
           uni.showToast({
-            title: '保存成功!图片格式为透明PNG!',
-            icon: 'none',
-            duration: 3000 });
+            title: '系统繁忙 请稍后再试!',
+            icon: 'none' });
 
         } });
 
