@@ -20,7 +20,7 @@
 		data() {
 			return {
 				StatusBar: this.StatusBar,
-				CustomBar: this.CustomBar
+				CustomBar:  80
 			};
 		},
 		name: 'cu-custom',

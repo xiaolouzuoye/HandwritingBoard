@@ -1,0 +1,1 @@
+<signature bind:getImg="__e" vue-id="084cc45e-1" data-event-opts="{{[['^getImg',[['saveImg']]]]}}" bind:__l="__l"></signature>

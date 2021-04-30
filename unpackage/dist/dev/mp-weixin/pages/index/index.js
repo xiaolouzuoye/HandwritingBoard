@@ -220,6 +220,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -234,7 +243,8 @@ var _default =
         code: 905 }],
 
       index: 0,
-      name: '' };
+      name: '',
+      remaining: Math.floor(Math.random() * 100) };
 
   },
   onLoad: function onLoad() {
@@ -251,6 +261,12 @@ var _default =
     nav: function nav(url) {
       uni.navigateTo({
         url: url });
+
+    },
+    navmin: function navmin(id) {
+      wx.navigateToMiniProgram({
+        appId: id,
+        path: 'pages/index/index' });
 
     },
     PickerChange: function PickerChange(e) {

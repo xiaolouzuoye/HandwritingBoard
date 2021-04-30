@@ -96,7 +96,7 @@ var components
 try {
   components = {
     signature: function() {
-      return Promise.all(/*! import() | components/signature/signature */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/signature/signature")]).then(__webpack_require__.bind(null, /*! @/components/signature/signature.vue */ 45))
+      return Promise.all(/*! import() | components/signature/signature */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/signature/signature")]).then(__webpack_require__.bind(null, /*! @/components/signature/signature.vue */ 51))
     }
   }
 } catch (e) {

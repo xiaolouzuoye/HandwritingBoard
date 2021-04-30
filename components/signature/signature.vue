@@ -1,6 +1,6 @@
 <template>
 <view class="wrapper">
-	<view class="cu-custom bg-gray " :style="[{height:CustomBar + 'px'}]">
+	<view class="cu-custom bg-gray" :style="[{height:CustomBar + 'px'}]">
 		<view class="flex align-center justify-between margin-top-xs padding-left" style="position: absolute;" :style="[{width:Custom.left + 'px'},{top:Custom.top + 'px'}]">
 			<view class="flex align-center">
 				<view class="cuIcon-back text-gray" style="font-size: 40upx;" @click="navBack()">

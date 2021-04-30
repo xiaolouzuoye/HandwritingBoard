@@ -16,12 +16,14 @@
 			
 					// #ifdef MP-WEIXIN || MP-QQ
 					Vue.prototype.StatusBar = e.statusBarHeight;
-					let capsule = wx.getMenuButtonBoundingClientRect();
+					let capsule = uni.getMenuButtonBoundingClientRect();
 					console.log('capsule',capsule)
 					if (capsule) {
 						Vue.prototype.Custom = capsule;
 						// Vue.prototype.capsuleSafe = uni.upx2px(750) - capsule.left + uni.upx2px(750) - capsule.right;
+						console.log('e',e)
 						Vue.prototype.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
+					//Vue.prototype.CustomBar = capsule.bottom + e.statusBarHeight;
 					} else {
 						Vue.prototype.CustomBar = e.statusBarHeight + 50;
 					}

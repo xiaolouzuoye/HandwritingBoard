@@ -21,13 +21,22 @@
         <text class="text-grey">免费设计签名</text>
       </view>
     </view>
+		<!-- #ifdef MP-WEIXIN -->
 	<view class="cu-item arrow" @click="nav('../coupons/coupons')">
 	  <view class="content" hover-class="none" >
 	    <text class="cuIcon-presentfill text-grey"></text>
 	    <text class="text-grey">免费领外卖券
 		</text>
 	  </view>
+	  <view class="bg-red text-xs" style="border-radius: 20upx;padding:5upx;">今日大额红包还剩{{remaining}}个</view>
 	</view>
+	<view class="cu-item arrow" @click="navmin('wx8fab88eb5f654b0a')">
+	  <view class="content" hover-class="none" >
+	    <text class="cuIcon-picfill text-grey"></text>
+	    <text class="text-grey">文案头像壁纸背景图戳</text>
+	  </view>
+	</view>
+	<!-- #endif -->
 <!--    <view class="cu-item arrow">
       <navigator class="content"  hover-class="none">
         <text class="cuIcon-questionfill text-grey"></text>
@@ -84,11 +93,12 @@
 					code:905
 				}],
 				index:0,
-				name:''
+				name:'',
+				remaining:Math.floor(Math.random()*100)
 			}
 		},
 		onLoad() {
-
+			
 		},
 		onShareAppMessage(){
 			return {
@@ -101,6 +111,12 @@
 			nav(url){
 				uni.navigateTo({
 					url:url
+				})
+			},
+			navmin(id){
+				wx.navigateToMiniProgram({
+					appId:id,
+					path:'pages/index/index'
 				})
 			},
 			PickerChange(e){
